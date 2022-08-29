@@ -1,0 +1,4 @@
+controller:
+  base-path: /api
+  api-calculate-fibonacci: /serie/fibonacci/{seriesLength}
+  api-calculate-fibonacci-limit: /serie/fibonacci/limite/{limit}
