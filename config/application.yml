@@ -1,4 +1,11 @@
 controller:
   base-path: /api
-  api-calculate-fibonacci: /serie/fibonacci/{seriesLength}
-  api-calculate-fibonacci-limit: /serie/fibonacci/limite/{limit}
+  api-calculate-fibonacci: /calculate/fibonacci/{seriesLength}
+  api-calculate-fibonacci-limit: /calculate/fibonacci/limite/{limit}
+  api-get-all-series-fibonacci: /get/series/all/fibonacci
+  api-delete-serie-fibonacci: /delete/serie/fibonacci/{idSerie}
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

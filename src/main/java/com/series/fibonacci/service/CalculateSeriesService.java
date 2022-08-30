@@ -1,19 +1,21 @@
 package com.series.fibonacci.service;
 
+import com.series.fibonacci.model.response.CalculateFibonacciResponse;
+import com.series.fibonacci.model.response.SeriesFibonacciResponse;
+
 /**
  * SeriesService interface.
  * Interface with  methods definitions to calculate Fibonacci Series.
  * @author jesu_
  */
-public interface SeriesService {
+public interface CalculateSeriesService {
 
-    /**
-     * ConvertFibonacciToString definition method.
-     * Method to convert a Fibonacci series to string.
-     * @param valuesFibonacci array with values of Fibonacci series.
-     * @return the Fibonacci sequence as a String.
-     */
-    String convertFibonacciToString(long[] valuesFibonacci);
+
+    CalculateFibonacciResponse getSeriesFibonacci(Long seriesLength);
+
+    CalculateFibonacciResponse getSeriesFibonacciLimit(Long seriesLength);
+
+    SeriesFibonacciResponse getAllSeriesFibonacci();
 
     /**
      * CalculateFibonacci definition method.
@@ -22,7 +24,7 @@ public interface SeriesService {
      * @return String Fibonacci sequences with length limit of items.
      * @throws IllegalArgumentException if the length is less than one or greater 93.
      */
-    String calculateSeriesFibonacci(int seriesLength);
+    Long[] calculateSeriesFibonacci(Long seriesLength);
 
     /**
      * CalculateSeriesFibonacciLimit definition method.
@@ -31,6 +33,14 @@ public interface SeriesService {
      * @return String Fibonacci sequence less o equal than length limit value.
      * @throws IllegalArgumentException if the length is less than one or greater 93.
      */
-    String calculateSeriesFibonacciLimit(int limit);
+    Long[] calculateSeriesFibonacciLimit(Long limit);
+
+    /**
+     * ConvertFibonacciToString definition method.
+     * Method to convert a Fibonacci series to string.
+     * @param valuesFibonacci array with values of Fibonacci series.
+     * @return the Fibonacci sequence as a String.
+     */
+    String convertFibonacciToString(long[] valuesFibonacci);
 
 }
