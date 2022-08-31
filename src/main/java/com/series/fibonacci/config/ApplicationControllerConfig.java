@@ -1,6 +1,5 @@
 package com.series.fibonacci.config;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
